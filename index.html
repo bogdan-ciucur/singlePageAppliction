@@ -2,66 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>page switcher</title>
+    <title>Page Switcher</title>
 
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <header>
         <nav>
-            <h1>js one page</h1>
+            <h1>JavaScript Wizard</h1>
             <ul class="tabs">
-                
                 <li class="tab is-active">
                     <a data-switcher data-tab="1">Home</a>
                 </li>
-
                 <li class="tab">
                     <a data-switcher data-tab="2">About</a>
                 </li>
-
                 <li class="tab">
                     <a data-switcher data-tab="3">Services</a>
                 </li>
-
                 <li class="tab">
                     <a data-switcher data-tab="4">Contact</a>
                 </li>
-                
             </ul>
         </nav>
     </header>
-
     <main>
         <section class="pages">
-            <div class="page" data-page="1">
-
+            <div class="page is-active" data-page="1">
                 <h2>Page 1</h2>
-                <p>welcome to the home page</p>
+                <p>Welcome to the home page</p>
             </div>
-
-            <div class="page" data-page="1">
+            <div class="page" data-page="2">
                 <h2>Page 2</h2>
-                <p>welcome to the about page</p>
+                <p>Welcome to the about page</p>
             </div>
-            
-            <div class="page" data-page="1">
+            <div class="page" data-page="3">
                 <h2>Page 3</h2>
-                <p>welcome to the services page</p>
+                <p>Welcome to the services page</p>
             </div>
-            
-            <div class="page" data-page="1">
+            <div class="page" data-page="4">
                 <h2>Page 4</h2>
-                <p>welcome to the contact page</p>
+                <p>Welcome to the contact page</p>
             </div>
-            
         </section>
     </main>
 
-
-
-    <script src="./app.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
