@@ -1,17 +1,17 @@
 window.onload = () => {
-    const tab_switchers = document.querySelectorAll('[data-switcher]');
+    const tabSwitchers = document.querySelectorAll('[data-switcher]');
 
-    for(let i = 0; i < tab_switchers.length; i++) {
-        const tab_switcher = tab_switchers[i];
-        const page_id = tab_switcher.dataset.tab;
+    for(let i = 0; i < tabSwitchers.length; i++) {
+        const tabSwitcher = tabSwitchers[i];
+        const pageId = tabSwitcher.dataset.tab;
 
-        tab_switcher.addEventListener('click', () => {
+        tabSwitcher.addEventListener('click', () => {
             document.querySelector('.tabs .tab.is-active').classList.remove('is-active');
-            // console.log(page_id);
-            tab_switcher.parentNode.classList.add('is-active');
+
+            tabSwitcher.parentNode.classList.add('is-active');
 
 
-            switchPage(page_id)
+            switchPage(pageId)
         })
     }
 }
@@ -20,16 +20,16 @@ window.onload = () => {
 
 
 
-function switchPage(page_id) {
-    console.log(page_id);
-    const current_page = document.querySelector('.pages .page.is-active');
+function switchPage(pageId) {
+    console.log(pageId);
+    const currentPage = document.querySelector('.pages .page.is-active');
 
-    // if(current_page != null) {
+    // if(currentPage != null) {
 
     // }
 
-    current_page.classList.remove('is-active');
+    currentPage.classList.remove('is-active');
 
-    const next_page = document.querySelector(`.pages .page[data-page="${page_id}"]`);
-    next_page.classList.add('is-active');
+    const nextPage = document.querySelector(`.pages .page[data-page="${pageId}"]`);
+    nextPage.classList.add('is-active');
 }
